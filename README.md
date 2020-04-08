@@ -5,6 +5,12 @@ brick breaker project with Beckham Win for TCS using Pygame
 ## Project setup steps:
 
 1. Install git (?)
+    - check if git is installed - open 'terminal' application and type:
+        
+        `git --version`
+    
+
+2. Install [Homebrew](https://brew.sh/)
 2. Install VSCode
 3. Install pipenv
 4. Install Pygame
