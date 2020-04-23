@@ -7,6 +7,8 @@ is_blue = True
 x = 30
 y = 30
 
+clock = pygame.time.Clock()
+
 while not done:
 
     # check if we hit the close window button
@@ -31,6 +33,12 @@ while not done:
     else:
         color = (225, 100, 0)
 
+    # erase previous rectangle before drawing a new one
+    screen.fill((0, 0, 0))
+
+    # draw rectangle with top left at (x,y)
     pygame.draw.rect(screen, color, pygame.Rect(x, y, 60, 60))
 
     pygame.display.flip()
+
+    clock.tick(60)
