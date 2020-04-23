@@ -5,12 +5,20 @@ screen = pygame.display.set_mode((400, 300))
 done = False
 
 while not done:
+    is_blue = True
 
     # check if we hit the close window button
     for event in pygame.event.get():
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
+            is_blue = not is_blue
         if event.type == pygame.QUIT:
             done = True
 
-    pygame.draw.rect(screen, (0, 128, 255), pygame.Rect(30, 30, 60, 60))
+    if is_blue:
+        color = (0, 128, 255)
+    else:
+        color = (225, 100, 0)
+
+    pygame.draw.rect(screen, color, pygame.Rect(30, 30, 60, 60))
 
     pygame.display.flip()
