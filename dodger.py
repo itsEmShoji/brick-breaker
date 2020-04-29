@@ -57,9 +57,6 @@ def game_loop():
         gameDisplay.fill(white)
         car(x, y)
 
-        if x > display_width - car_width or x < 0:
-            gameExit = True
-
         pygame.display.update()
         clock.tick(60)
 
