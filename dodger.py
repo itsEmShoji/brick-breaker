@@ -48,6 +48,12 @@ def game_loop():
 
         x += x_change
 
+        if x > display_width - car_width:
+            x = display_width - car_width
+
+        if x < 0:
+            x = 0
+
         gameDisplay.fill(white)
         car(x, y)
 
